@@ -2,15 +2,21 @@ import pymongo
 import pandas as pd
 import json
 import certifi
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+
+MONGO_URI = os.getenv('MONGODB_URI')
 
 
 print('welcome to python kaggle!!!');
 
-#client = pymongo.MongoClient("mongodb+srv://renn:mikalina_11@cluster0.m22rc.mongodb.net/cluster0?retryWrites=true&w=majority")
 
 #Add the mongoDb authentication
-cluster = pymongo.MongoClient("mongodb+srv://renn:mikalina_11@cluster0.m22rc.mongodb.net/cluster0?retryWrites=true&w=majority", tlsCAFile=certifi.where())
-
+cluster = pymongo.MongoClient("{}".format(MONGO_URI), tlsCAFile=certifi.where())
 
 #post = {"_id": 0, "name": "time", "score": 10}
 
