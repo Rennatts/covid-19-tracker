@@ -135,8 +135,8 @@ function GlobalMap({ count, center, zoom}) {
 
 
   return (
-      <div> 
-        <MuiPickersUtilsProvider utils={DateFnsUtils}>
+      <div className="globalmap_container"> 
+        <MuiPickersUtilsProvider utils={DateFnsUtils} className="datepicker">
             <KeyboardDatePicker
                 disableToolbar
                 variant="inline"
@@ -164,7 +164,15 @@ function GlobalMap({ count, center, zoom}) {
             </MapContainer>  
           </div> 
           ) : (
-            <SpinnerCircular size={50} thickness={100} speed={100} color="#AC396B" secondaryColor="rgba(0, 0, 0, 0.44)" />
+              <div className="spinner">
+                  <SpinnerCircular 
+                  size={50} 
+                  thickness={100} 
+                  speed={100} 
+                  color="#AC396B" 
+                  secondaryColor="rgba(0, 0, 0, 0.44)"/>
+              </div>
+            
           )
         }           
       </div>

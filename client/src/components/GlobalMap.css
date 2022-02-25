@@ -1,3 +1,16 @@
 .leaftlet-container {
     background-color: rgb(163, 206, 255);
 }
+
+.datepicker{
+    background-color: rgb(162, 138, 138);
+}
+
+.globalmap_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+
+}
+
